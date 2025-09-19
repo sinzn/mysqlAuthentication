@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login & Register</title>
+  <script>
+    function toggle(f){login.style.display=f?'none':'block';register.style.display=f?'block':'none';}
+  </script>
+</head>
+<body>
+<div align="center" style="margin-top:100px;">
+
+  <!-- Login -->
+  <form id="login" method="post" action="/login">
+    <table cellpadding="8">
+      <tr><td>Email:</td><td><input type="email" name="u"></td></tr>
+      <tr><td>Password:</td><td><input type="password" name="p"></td></tr>
+      <tr><td></td><td><input type="submit" value="Login"> <input type="button" value="Register" onclick="toggle(1)"></td></tr>
+    </table>
+  </form>
+
+  <!-- Register -->
+  <form id="register" method="post" action="/register" style="display:none;">
+    <table cellpadding="8">
+      <tr><td>Username:</td><td><input name="ru"></td></tr>
+      <tr><td>Email:</td><td><input type="email" name="re"></td></tr>
+      <tr><td>Password:</td><td><input type="password" name="rp"></td></tr>
+      <tr><td></td><td><input type="submit" value="Register"> <input type="button" value="Login" onclick="toggle(0)"></td></tr>
+    </table>
+  </form>
+
+</div>
+</body>
+</html>
