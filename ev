@@ -1,0 +1,27 @@
+DB_HOST=localhost
+DB_USER=*****
+DB_PASS=Abc**********
+DB_NAME=****
+SESSION_SECRET=***********
+
+
+CREATE DATABASE IF NOT EXISTS ******;
+CREATE USER IF NOT EXISTS '******'@'localhost' IDENTIFIED BY '*******8';
+GRANT ALL PRIVILEGES ON ****.* TO 'authdb'@'*****';
+FLUSH PRIVILEGES;
+
+CREATE DATABASE ****;
+USE ****;
+
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE,
+  email VARCHAR(100) UNIQUE,
+  password VARCHAR(255)
+);
+
+
+show databases;
+use *****;
+SHOW TABLES;
+SELECT * FROM users;
